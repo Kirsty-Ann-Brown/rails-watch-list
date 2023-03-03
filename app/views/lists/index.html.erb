@@ -1,0 +1,10 @@
+<h2>WATCH LISTS</h2>
+<hr>
+<ol>
+  <% @lists.each do |list| %>
+    <li><%= list.name %></li>
+    <%=link_to "VIEW LIST", list_path(list)%>
+    <%= link_to "CREATE BOOKMARK", new_list_bookmark_path(list)%>
+
+  <% end %>
+</ol>
