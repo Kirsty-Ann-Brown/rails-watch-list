@@ -3,8 +3,8 @@
 <ol>
   <% @lists.each do |list| %>
     <li><%= list.name %></li>
-    <%=link_to "VIEW LIST", list_path(list)%>
-    <%= link_to "CREATE BOOKMARK", new_list_bookmark_path(list)%>
+    <%=link_to "VIEW LIST", list_path(list), class: 'btn btn-secondary'%>
+    <%= link_to "CREATE BOOKMARK", new_list_bookmark_path(list), class: 'btn btn-secondary'%>
 
   <% end %>
 </ol>

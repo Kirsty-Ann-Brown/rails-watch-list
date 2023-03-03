@@ -2,7 +2,7 @@
 <br>
 <%@list.bookmarks.each do |b| %>
   <%=b.movie.title%>
-  <%= link_to "DELETE", bookmark_path(b), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <%= link_to "DELETE", bookmark_path(b), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-secondary'%>
 <%end%>
 
-<%= link_to "CREATE BOOKMARK", new_list_bookmark_path(@list)%>
+<%= link_to "CREATE BOOKMARK", new_list_bookmark_path(@list), class: 'btn btn-secondary'%>
